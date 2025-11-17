@@ -1,0 +1,40 @@
+button {
+  max-width: 528px;
+  all: unset;
+  font-weight: 500;
+  color: var(--stroke-highlight);
+
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  
+
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+  margin-top: 3rem;
+
+  &.button-primary {
+    color: white;
+    background-color: #E43A12;
+
+    &:hover,
+    &:focus {
+      background-color: #F3541C;
+    }
+  }
+
+}
+
+.button-secondary {
+  color: var(--stroke-highlight);
+  background-color: var(--surface-primary);
+  border: 1px solid var(--text-highlight);
+  margin-left: 8.8rem;
+  margin-right: 1rem;
+  
+  &:hover,
+  &:focus {
+    color: #E43A12;
+    outline: 0.25rem solid var(--surface-secondary);
+  }
+}
