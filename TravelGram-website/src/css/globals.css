@@ -60,6 +60,17 @@ a:hover {
     }
 }
 
+/* show specific elements on small screens (used for the search icon) */
+.show-mobile {
+    display: none;
+}
+
+@media (width <= 480px) {
+    .show-mobile {
+        display: initial;
+    }
+}
+
 @media (width <= 768px) {
     .container {
         padding-inline: 1rem;
