@@ -1,4 +1,10 @@
 nav {
+    /* full-bleed background */
+    background-color: var(--surface-color);
+    width: 100%;
+}
+
+nav > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +41,7 @@ nav ul li:last-child img {
 }
 
 @media (width <= 768px) {
-    nav {
+    nav > .container {
         padding-block: 1rem;
     }
     
@@ -53,8 +59,9 @@ nav ul li:last-child img {
 }
 
 @media (width <= 480px) {
-    nav {
+    nav > .container {
         padding-block: 0.75rem;
+        padding-inline: 1rem;
     }
     
     nav #logo img {
