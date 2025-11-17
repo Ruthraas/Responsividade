@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    /* colors */
+    --brand-color-light: #60A5FA;
+    --brand-color-dark: #1D4ED8;
+    --bg-color: #0F172A;
+    --stroke-color: #1E293B;
+    --text-color: #F1F5F9;
+    --text-color-secondary: #CBD5E1;
+    /* text sizing & style*/
+    --font-family: "Plus Jakarta Sans", sans-serif;
+    --h1: 800 1.25rem/135% var(--font-family);
+    --h2: 800 1rem/140% var(--font-family);
+    --h3: 800 0.8125rem/140% var(--font-family);
+    --text: 400 0.9375rem/140% var(--font-family);
+    --text-span: 600 0.875rem/145% var(--font-family);
+    --text-sm: 400 0.8125rem/140% var(--font-family);
+}
+
+body {
+    font: var(--text);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: var(--brand-color-light);
+}
+
+h1,h2,h3{
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 80rem;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+main {
+    margin-block: 2rem;
+    row-gap: 2rem;
+    column-gap: 0;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+    "featured"
+    "weekly"
+    "ai"
+    "aside";
+}
+
+.content-tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--brand-color-dark);
+    border-radius: 0.25rem;
+    font: 500 0.625rem/1.2 var(--font-family);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0rem 0.25rem 1rem #02061740;
+}
+
+@media (width >= 80em) {
+    :root {
+        --h1: 800 1.5rem/135% var(--font-family);
+        --h2: 800 1rem/140% var(--font-family);
+        --h3: 800 0.875rem/140% var(--font-family);
+        --text: 400 1rem/140% var(--font-family);
+        --text-span: 600 0.875rem/145% var(--font-family);
+        --text-sm: 400 0.875rem/140% var(--font-family);
+    }
+
+    .container {
+        padding-inline: 2rem;
+    }
+
+    main {
+        margin-block: 2.5rem;
+        row-gap: 5rem;
+        column-gap: 2rem;
+        grid-template-columns: 2fr 1.3fr;
+
+        grid-template-areas: 
+        "featured featured"
+        "weekly weekly"
+        "ai aside";
+    }
+}
